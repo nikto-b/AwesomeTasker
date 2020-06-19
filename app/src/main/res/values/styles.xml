@@ -9,10 +9,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppTheme.CardView" parent="Widget.MaterialComponents.CardView">
+    <style name="AppTheme.CardView" parent="CardView">
         <item name="cardCornerRadius">@dimen/container_corner_radius_medium</item>
-        <item name="background">@color/colorBackgroundLight</item>
         <item name="android:padding">@dimen/container_padding</item>
+        <item name="background">@color/colorBackgroundLight</item>
+        <item name="elevation">4dp</item>
+        <item name="android:layout_margin">@dimen/container_outer_margin</item>
     </style>
 
 </resources>

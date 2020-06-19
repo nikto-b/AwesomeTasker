@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_taskListFragment"
+            app:destination="@id/taskListFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -24,5 +27,12 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_taskListFragment"
+            app:destination="@id/taskListFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/taskListFragment"
+        android:name="com.nikto_b.awesometasker.Fragment.TaskListFragment"
+        android:label="TaskListFragment" />
 </navigation>

@@ -1,9 +1,8 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="container_padding">4dp</dimen>
+    <dimen name="container_outer_margin">8dp</dimen>
     <dimen name="container_corner_radius_small">4dp</dimen>
     <dimen name="container_corner_radius_medium">8dp</dimen>
     <dimen name="container_corner_radius_big">16dp</dimen>
-    <dimen name="width_task_card">180dp</dimen>
-    <dimen name="height_task_card">140dp</dimen>
 </resources>

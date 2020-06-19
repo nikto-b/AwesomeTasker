@@ -5,12 +5,10 @@
     android:layout_height="match_parent"
     android:background="@null">
 
-    <GridView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="@dimen/container_padding"
-        android:stretchMode="columnWidth"/>
+        android:layout_height="match_parent"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"

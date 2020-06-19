@@ -7,11 +7,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.transition.TransitionManager;
 
 import com.nikto_b.awesometasker.DataModel.TaskDM;
 import com.nikto_b.awesometasker.R;
-import com.transitionseverywhere.Explode;
-import com.transitionseverywhere.TransitionManager;
 
 public class SimpleTaskCardVH extends RecyclerView.ViewHolder {
     public static final int layout_res = R.layout.layout_task;

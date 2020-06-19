@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -33,10 +34,17 @@ public class TaskListFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.recycler);
         ArrayList<TaskDM> arrayList = new ArrayList<>();
         for(int i = 0; i < 50; i++) {
-            arrayList.add(new TaskDM("title " + i, i + " days"));
+            arrayList.add(new TaskDM("title " + i, i + " days", i));
         }
         TaskCardAdapter adapter = new TaskCardAdapter(view.getContext(), arrayList);
+        adapter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "clicked " + ((TaskDM)(view.getTag())).toString() + "; view id: " + view.getId(), Toast.LENGTH_SHORT).show();
+            }
+        });
         recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        GridLayoutManager lm = new GridLayoutManager(getContext(), 2);
+        recyclerView.setLayoutManager(lm);
     }
 }

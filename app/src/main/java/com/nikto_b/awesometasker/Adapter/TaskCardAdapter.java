@@ -16,6 +16,11 @@ import java.util.ArrayList;
 public class TaskCardAdapter extends RecyclerView.Adapter<SimpleTaskCardVH> {
     private ArrayList<TaskDM> dataset;
     private LayoutInflater localLayoutInflater;
+    private View.OnClickListener clickListener = null;
+
+    public void setOnClickListener(View.OnClickListener clickListener) {
+        this.clickListener = clickListener;
+    }
 
     public TaskCardAdapter(@NonNull Context context, @NonNull ArrayList<TaskDM> dataset) {
         this.dataset = dataset;
@@ -26,12 +31,12 @@ public class TaskCardAdapter extends RecyclerView.Adapter<SimpleTaskCardVH> {
     @Override
     public SimpleTaskCardVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = localLayoutInflater.inflate(SimpleTaskCardVH.layout_res, parent, false);
-        return new SimpleTaskCardVH(view);
+        return new SimpleTaskCardVH(view, clickListener);
     }
 
     @Override
     public void onBindViewHolder(@NonNull SimpleTaskCardVH holder, int position) {
-        holder.bind(dataset.get(position));
+        holder.bind(dataset.get(position), position);
     }
 
     @Override
